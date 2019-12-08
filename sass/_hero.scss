@@ -1,0 +1,18 @@
+.hero {
+  padding: 4rem 0;
+  background-size: cover;
+  width: 100%;
+
+  &--home {
+    background-image: url('../images/canyon.jpg');
+    background-position: center center;
+  }
+
+  &__content {
+    background: white;
+    max-width: 460px;
+    width: 100%;
+    padding: 2rem 2.5rem;
+  }
+}
+

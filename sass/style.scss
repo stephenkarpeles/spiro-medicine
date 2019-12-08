@@ -1,28 +1,25 @@
 // Variables
-//@import 'font-faces';
 @import 'mixins';
 @import 'variables';
 @import 'base';
 // @import 'utilities';
 @import 'accessibility';
 
-
 // // Foundational
-// @import 'base';
-// @import 'typography';
+@import 'typography';
 // @import 'buttons';
 // @import 'forms';
 
 // // Layout
 @import 'grid';
-// @import 'layout';
+@import 'layout';
 
 // // Theme
 // @import 'header';
 // @import 'footer';
 
 // // Components
-// @import 'comments';
+@import 'hero';
 // @import 'idea-block';
 // @import 'featured-block';
 // @import 'lead-magnet';

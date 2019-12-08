@@ -91,6 +91,31 @@ input[type=submit],
   outline: 0;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+p {
+  line-height: 1.375;
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
 .grid-row {
   display: flex;
   justify-content: space-between;
@@ -118,6 +143,28 @@ input[type=submit],
 
 .col-3-4 {
   width: calc(75% - 20px);
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 4rem 0;
+  background-size: cover;
+  width: 100%;
+}
+.hero--home {
+  background-image: url("../images/canyon.jpg");
+  background-position: center center;
+}
+.hero__content {
+  background: white;
+  max-width: 460px;
+  width: 100%;
+  padding: 2rem 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

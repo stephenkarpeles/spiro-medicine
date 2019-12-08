@@ -20,11 +20,16 @@ get_header();
   </div>
 </section>
 
-<div class="grid-row">
-  <div class="col col-1-4"><p>Test</p></div>
-  <div class="col col-1-4"><p>Test</p></div>
-  <div class="col col-1-4"><p>Test</p></div>
-  <div class="col col-1-4"><p>Test</p></div>
-</div>
+
+<section>
+  <div class="container">
+    <div class="grid-row">
+      <div class="col col-1-4"><p>Test</p></div>
+      <div class="col col-1-4"><p>Test</p></div>
+      <div class="col col-1-4"><p>Test</p></div>
+      <div class="col col-1-4"><p>Test</p></div>
+    </div>
+  </div>
+</section>
 
 <?php get_footer(); ?>
