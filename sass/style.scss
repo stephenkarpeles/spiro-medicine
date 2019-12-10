@@ -1,32 +1,23 @@
-// Variables
-@import 'mixins';
-@import 'variables';
-@import 'base';
-// @import 'utilities';
-@import 'accessibility';
+// Base
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/base';
+@import 'base/utilities';
+@import 'base/accessibility';
+@import 'base/typography';
 
-// // Foundational
-@import 'typography';
-@import 'buttons';
-// @import 'forms';
+// Layout
+@import 'layout/grid';
+@import 'layout/layout';
+@import 'layout/header';
+// @import 'layout/footer';
 
-// // Layout
-@import 'grid';
-@import 'layout';
+// Components
+@import 'components/buttons';
+@import 'components/hero';
+@import 'components/featured-box';
 
-// // Theme
-@import 'header';
-// @import 'footer';
-
-// // Components
-@import 'hero';
-// @import 'idea-block';
-// @import 'featured-block';
-// @import 'lead-magnet';
-// @import 'modal';
-// @import 'related-posts';
-
-// // Pages
+// Pages
 // @import 'blog';
 // @import 'post';
 // @import 'search';

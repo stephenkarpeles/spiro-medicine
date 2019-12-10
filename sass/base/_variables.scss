@@ -9,7 +9,7 @@ $sans-serif-heavy: 'NeuzeitBookHeavy', Helvetica, Arial, sans-serif;
 $primary-color: #2f7681;
 $secondary-color: #bcb865;
 $tertiary-color: #8fc4c6;
-$quaternary-color: #3b1321;
+$quaternary-color: #803131;
 
 $text-color-main: #221e1f;
 $text-color-light: #aaaaaa;
@@ -19,11 +19,12 @@ $text-color-mid-alt: #999999;
 // Grays
 $gray-1: #707070;
 $gray-2: #575757;
+$gray-3: #ccc;
 
 // Layout
 $container-width: 90%;
 $container-max-width: 1120px;
-$section-padding: 40px;
+$section-padding: 3rem 0;
 $container-small-max-width: 840px;
 $viewport-switch: calc(#{$container-max-width}/.9);
 $gutter: 20px;

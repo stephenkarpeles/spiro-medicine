@@ -1,5 +1,10 @@
 .header {
   padding: .75rem 0;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .15);
 
   a {
     color: $primary-color;

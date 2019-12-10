@@ -20,6 +20,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/9db85e5c3a.js" crossorigin="anonymous"></script>
+
 	<?php wp_head(); ?>
 </head>
 

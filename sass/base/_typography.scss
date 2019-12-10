@@ -30,10 +30,16 @@ h6 {
 
 h1 {
   font-size: 3.052rem;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 2.441rem;
+  text-transform: uppercase;
+
+  span {
+    color: $primary-color;
+  }
 }
 
 h3 {
@@ -50,4 +56,14 @@ h5 {
 
 small {
   font-size: 0.8rem;
+}
+
+.section-heading-wrap {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.75rem;
+  }
 }

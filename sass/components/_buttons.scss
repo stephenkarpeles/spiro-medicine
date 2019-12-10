@@ -1,0 +1,47 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  
+  @include link-transition;
+
+  &:hover,
+  &:focus {
+    opacity: .85;
+  }
+
+  &--small {
+    font-size: .9rem;
+    padding: 7px 13px;
+  }
+
+  &--medium {
+    font-size: 1rem;
+    padding: 13px 21px;
+  }
+
+  &--large {
+    font-size: 1.25rem;
+    padding: 16px 28px;
+  }
+
+  &--primary {
+    background: $primary-color;
+    color: white;
+  }
+
+  &--secondary {
+    background: $secondary-color;
+    color: white;
+  }
+
+  &--tertiary {
+    background: $tertiary-color;
+    color: white;
+  }
+
+  &--quaternary {
+    background: $quaternary-color;
+    color: white;
+  }
+}

@@ -1,17 +1,355 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 10| @import 'buttons';
- *   |         ^^^^^^^^^
- *   '
- *   sass/style.scss 10:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 10\2502  @import 'buttons';\a   \2502          ^^^^^^^^^\a   \2575 \a   sass/style.scss 10:9  root stylesheet";
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  line-height: 1.375;
+  color: #221e1f;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea,
+input.text,
+input[type=text],
+input[type=email],
+input[type=button],
+input[type=submit],
+.input-checkbox {
+  -webkit-appearance: none !important;
+  border-radius: 0 !important;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+p {
+  line-height: 1.375;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3.052rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.441rem;
+  text-transform: uppercase;
+}
+h2 span {
+  color: #2f7681;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+.section-heading-wrap {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.section-heading-wrap h2 {
+  font-size: 2.75rem;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1-4 {
+  width: calc(25% - 20px);
+}
+
+.col-1-3 {
+  width: calc(33.33% - 20px);
+}
+
+.col-1-2 {
+  width: calc(50% - 20px);
+}
+
+.col-2-3 {
+  width: calc(66.66% - 20px);
+}
+
+.col-3-4 {
+  width: calc(75% - 20px);
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+.header {
+  padding: 0.75rem 0;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+.header a {
+  color: #2f7681;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.header a:hover, .header a:focus {
+  color: #803131;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.header__logo img {
+  width: 180px;
+}
+.header__nav ul {
+  display: flex;
+}
+.header__nav li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.btn:hover, .btn:focus {
+  opacity: 0.85;
+}
+.btn--small {
+  font-size: 0.9rem;
+  padding: 7px 13px;
+}
+.btn--medium {
+  font-size: 1rem;
+  padding: 13px 21px;
+}
+.btn--large {
+  font-size: 1.25rem;
+  padding: 16px 28px;
+}
+.btn--primary {
+  background: #2f7681;
+  color: white;
+}
+.btn--secondary {
+  background: #bcb865;
+  color: white;
+}
+.btn--tertiary {
+  background: #8fc4c6;
+  color: white;
+}
+.btn--quaternary {
+  background: #803131;
+  color: white;
+}
+
+.hero {
+  padding: 4rem 0;
+  background-size: cover;
+  width: 100%;
+}
+.hero h1 {
+  color: #2f7681;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+}
+.hero h1 span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: block;
+  text-transform: uppercase;
+  color: #221e1f;
+  padding-bottom: 0.15rem;
+}
+.hero h1:after {
+  content: "";
+  background: #707070;
+  height: 3px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  display: block;
+}
+.hero p {
+  color: #575757;
+  font-size: 1.15rem;
+  line-height: 1.45;
+}
+.hero--home {
+  background-image: url("../images/canyon.jpg");
+  background-position: center center;
+}
+.hero__content {
+  background: white;
+  max-width: 470px;
+  width: 100%;
+  padding: 2.15rem 2.5rem;
+}
+
+.featured-box {
+  text-align: center;
+  border: 1px solid #575757;
+  padding: 28px 20px;
+}
+.featured-box__icon {
+  font-size: 34px;
+  margin-bottom: 1rem;
+}
+.featured-box__icon i {
+  background: -webkit-linear-gradient(45deg, #914cd9, #db3990);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.featured-box__heading {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.featured-box__heading:after {
+  content: "";
+  display: block;
+  background: #ccc;
+  height: 3px;
+  width: 80px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.225rem;
+}
+
+/*# sourceMappingURL=style.css.map */
