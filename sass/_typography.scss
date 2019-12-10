@@ -11,6 +11,9 @@ em {
 p {
   line-height: 1.375;
   margin-bottom: 1.5rem;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
 h1, 
@@ -18,7 +21,33 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {  
   margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small {
+  font-size: 0.8rem;
 }

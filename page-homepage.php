@@ -7,7 +7,7 @@ get_header();
   <div class="container">
     <div class="hero__content">
       <h1>
-        Welcome to Spiro
+        <span>Welcome to</span> Spiro
       </h1>
       <p>
         We offer compassionate, hyperaccessible, evidence-based psychotherapy, specializing in reproductive health.

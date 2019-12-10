@@ -3,6 +3,40 @@
   background-size: cover;
   width: 100%;
 
+  h1 {
+    color: $primary-color;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 1.25rem;
+      font-weight: 400;
+      display: block;
+      text-transform: uppercase;
+      color: $text-color-main;
+      padding-bottom: .15rem;
+    }
+
+    &:after {
+      content: '';
+      background: $gray-1;
+      height: 3px;
+      width: 80px;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      display: block;
+    }
+  }
+
+  p {
+    color: $gray-2;
+    font-size: 1.15rem;
+    line-height: 1.45;
+  }
+
   &--home {
     background-image: url('../images/canyon.jpg');
     background-position: center center;
@@ -10,7 +44,7 @@
 
   &__content {
     background: white;
-    max-width: 460px;
+    max-width: 470px;
     width: 100%;
     padding: 2rem 2.5rem;
   }

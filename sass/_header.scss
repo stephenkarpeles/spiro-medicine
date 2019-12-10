@@ -1,0 +1,44 @@
+.header {
+  padding: .75rem 0;
+
+  a {
+    color: $primary-color;
+    font-weight: 700;
+
+    @include link-transition;
+
+    &:hover,
+    &:focus {
+      color: $quaternary-color;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    img {
+      width: 180px;
+    }
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
