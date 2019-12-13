@@ -17,6 +17,14 @@ body {
   font-family: $sans-serif-main;
   line-height: 1.375;
   color: $text-color-main;
+
+  @include mq(ipad, 'max-width') {
+    font-size: 95%;
+  }
+
+  @include mq(tablet, 'max-width') {
+    font-size: 90%;
+  }
 }
 
 img {

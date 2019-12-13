@@ -3,32 +3,8 @@
   background-size: cover;
   width: 100%;
 
-  h1 {
-    color: $primary-color;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 0;
-    margin-bottom: 2rem;
-
-    span {
-      font-size: 1.25rem;
-      font-weight: 400;
-      display: block;
-      text-transform: uppercase;
-      color: $text-color-main;
-      padding-bottom: .15rem;
-    }
-
-    &:after {
-      content: '';
-      background: $gray-1;
-      height: 3px;
-      width: 80px;
-      position: absolute;
-      left: 0;
-      bottom: -10px;
-      display: block;
-    }
+  @include mq(tablet, 'max-width') {
+    padding: 3rem 0;
   }
 
   p {
@@ -40,6 +16,79 @@
   &--home {
     background-image: url('../images/canyon.jpg');
     background-position: center center;
+
+    h1 {
+      color: $primary-color;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0;
+      margin-bottom: 2rem;
+
+      span {
+        font-size: 1.25rem;
+        font-weight: 400;
+        display: block;
+        text-transform: uppercase;
+        color: $text-color-main;
+        padding-bottom: .15rem;
+      }
+
+      &:after {
+        content: '';
+        background: $gray-1;
+        height: 3px;
+        width: 80px;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        display: block;
+      }
+    }
+  }
+
+  &--about {
+    background-image: url('../images/flower-vertical.jpg');
+    background-position: center center;
+  }
+
+  &--services {
+    background-image: url('../images/tree.jpg');
+    background-position: center center;
+  }
+
+  &--resources {
+    background-image: url('../images/mountains.jpg');
+    background-position: center 25%;
+  }
+
+  &--about,
+  &--services,
+  &--resources {
+    padding: 4rem 0 9rem;
+
+    @include mq(tablet, 'max-width') {
+      padding: 3rem 0;
+    }
+
+    h1 {
+      position: relative;
+      margin-bottom: 1.5rem;
+
+      span {
+        color: $primary-color;
+      }
+
+      &:after {
+        content: '';
+        background: $gray-1;
+        height: 3px;
+        width: 80px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+      }
+    }
   }
 
   &__content {
@@ -47,6 +96,10 @@
     max-width: 470px;
     width: 100%;
     padding: 2.15rem 2.5rem;
+
+    @include mq(tablet, 'max-width') {
+      padding: 1.55rem;
+    }
   }
 }
 

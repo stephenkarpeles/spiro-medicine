@@ -33,9 +33,11 @@
 	<header id="masthead" class="header site-header">
     <div class="header__container">
 
-      <div class="header__logo">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-color.png ?> " alt="Spiro Medicine Home">
-      </div>
+      <a href="<?php echo get_home_url(); ?>">
+        <div class="header__logo">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-color.png ?> " alt="Spiro Medicine Home">
+        </div>
+      </a>
 
       <nav id="site-navigation" class="header__nav main-navigation">
         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'spiro-medicine' ); ?></button>

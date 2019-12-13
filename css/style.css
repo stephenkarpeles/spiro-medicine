@@ -18,6 +18,16 @@ body {
   line-height: 1.375;
   color: #221e1f;
 }
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 95%;
+  }
+}
+@media screen and (max-width: 639px) {
+  body {
+    font-size: 90%;
+  }
+}
 
 img {
   display: block;
@@ -111,7 +121,7 @@ p {
   margin-bottom: 1.5rem;
   margin-top: 0;
   padding-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 h1,
@@ -127,12 +137,12 @@ h6 {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: 3.052em;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: 2.441em;
   text-transform: uppercase;
 }
 h2 span {
@@ -140,19 +150,19 @@ h2 span {
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: 1.953em;
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: 1.563em;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 small {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 .section-heading-wrap {
@@ -275,35 +285,19 @@ section {
   color: white;
 }
 
+.breadcrumbs a {
+  color: #2f7681;
+}
+
 .hero {
   padding: 4rem 0;
   background-size: cover;
   width: 100%;
 }
-.hero h1 {
-  color: #2f7681;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 0;
-  margin-bottom: 2rem;
-}
-.hero h1 span {
-  font-size: 1.25rem;
-  font-weight: 400;
-  display: block;
-  text-transform: uppercase;
-  color: #221e1f;
-  padding-bottom: 0.15rem;
-}
-.hero h1:after {
-  content: "";
-  background: #707070;
-  height: 3px;
-  width: 80px;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  display: block;
+@media screen and (max-width: 639px) {
+  .hero {
+    padding: 3rem 0;
+  }
 }
 .hero p {
   color: #575757;
@@ -314,11 +308,78 @@ section {
   background-image: url("../images/canyon.jpg");
   background-position: center center;
 }
+.hero--home h1 {
+  color: #2f7681;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+}
+.hero--home h1 span {
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: block;
+  text-transform: uppercase;
+  color: #221e1f;
+  padding-bottom: 0.15rem;
+}
+.hero--home h1:after {
+  content: "";
+  background: #707070;
+  height: 3px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  display: block;
+}
+.hero--about {
+  background-image: url("../images/flower-vertical.jpg");
+  background-position: center center;
+}
+.hero--services {
+  background-image: url("../images/tree.jpg");
+  background-position: center center;
+}
+.hero--resources {
+  background-image: url("../images/mountains.jpg");
+  background-position: center 25%;
+}
+.hero--about, .hero--services, .hero--resources {
+  padding: 4rem 0 9rem;
+}
+@media screen and (max-width: 639px) {
+  .hero--about, .hero--services, .hero--resources {
+    padding: 3rem 0;
+  }
+}
+.hero--about h1, .hero--services h1, .hero--resources h1 {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.hero--about h1 span, .hero--services h1 span, .hero--resources h1 span {
+  color: #2f7681;
+}
+.hero--about h1:after, .hero--services h1:after, .hero--resources h1:after {
+  content: "";
+  background: #707070;
+  height: 3px;
+  width: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+}
 .hero__content {
   background: white;
   max-width: 470px;
   width: 100%;
   padding: 2.15rem 2.5rem;
+}
+@media screen and (max-width: 639px) {
+  .hero__content {
+    padding: 1.55rem;
+  }
 }
 
 .featured-box {
