@@ -17,6 +17,7 @@ body {
   font-family: $sans-serif-main;
   line-height: 1.375;
   color: $text-color-main;
+  animation: fadein 1s;
 
   @include mq(ipad, 'max-width') {
     font-size: 95%;
