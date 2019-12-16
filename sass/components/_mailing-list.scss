@@ -1,0 +1,64 @@
+.mailing-list-panel {
+  padding: 10rem 0;
+  background-size: cover;
+  width: 100%;
+  background-image: url('../images/flower-vertical-red.jpg');
+  background-position: center center;
+
+  h2 {
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.mailing-list-form-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(.95);
+
+  &.in-view {
+    animation: scale-larger .7s ease forwards;
+  }
+}
+
+.mailing-list-form-field--1 {
+  width: calc(100% - 120px);
+}
+
+.mailing-list-form-field--2 {
+  width: 120px;
+}
+
+.mailing-list-email-input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background: white;
+  height: 45px;
+  background: white;
+  display: block;
+  width: 100%;
+}
+
+.mailing-list-submit-btn {
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  border: 1px solid white;
+  background: $secondary-color;
+  display: inline-block;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  @include link-transition;
+
+  &:hover {
+    opacity: .8;
+  }
+}

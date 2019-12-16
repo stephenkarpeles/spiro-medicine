@@ -13,6 +13,22 @@
     line-height: 1.45;
   }
 
+  &__content {
+    background: white;
+    max-width: 470px;
+    width: 100%;
+    padding: 2.15rem 2.5rem;
+    transform: scale(.95);
+
+    @include mq(tablet, 'max-width') {
+      padding: 1.55rem;
+    }
+
+    &.in-view {
+      animation: scale-larger 1s ease forwards;
+    }
+  }
+
   &--home {
     background-image: url('../images/canyon.jpg');
     background-position: center center;
@@ -88,17 +104,6 @@
         bottom: 0;
         display: block;
       }
-    }
-  }
-
-  &__content {
-    background: white;
-    max-width: 470px;
-    width: 100%;
-    padding: 2.15rem 2.5rem;
-
-    @include mq(tablet, 'max-width') {
-      padding: 1.55rem;
     }
   }
 }

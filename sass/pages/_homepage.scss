@@ -1,11 +1,18 @@
 .home-services-grid {
   padding-bottom: 5rem;
+
+  .col {
+    &.in-view {
+      animation: scale-larger 1.15s ease forwards;
+    }
+  }
 }
 
 .hero.hero--home-learn-more {
   padding: 5rem 0 0;
   background-image: url('../images/tree.jpg');
   background-position: center center;
+  margin-bottom: 10rem;
 
   .container {
     display: flex;

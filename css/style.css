@@ -6,6 +6,14 @@
     opacity: 1;
   }
 }
+@keyframes scale-larger {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 *,
 *:before,
 *:after {
@@ -221,6 +229,10 @@ small {
   width: calc(75% - 20px);
 }
 
+.col-full-width {
+  width: 100%;
+}
+
 .container {
   width: 90%;
   max-width: 1120px;
@@ -337,6 +349,21 @@ section {
   font-size: 1.15rem;
   line-height: 1.45;
 }
+.hero__content {
+  background: white;
+  max-width: 470px;
+  width: 100%;
+  padding: 2.15rem 2.5rem;
+  transform: scale(0.95);
+}
+@media screen and (max-width: 639px) {
+  .hero__content {
+    padding: 1.55rem;
+  }
+}
+.hero__content.in-view {
+  animation: scale-larger 1s ease forwards;
+}
 .hero--home {
   background-image: url("../images/canyon.jpg");
   background-position: center center;
@@ -403,17 +430,6 @@ section {
   bottom: 0;
   display: block;
 }
-.hero__content {
-  background: white;
-  max-width: 470px;
-  width: 100%;
-  padding: 2.15rem 2.5rem;
-}
-@media screen and (max-width: 639px) {
-  .hero__content {
-    padding: 1.55rem;
-  }
-}
 
 .featured-box {
   text-align: center;
@@ -446,14 +462,80 @@ section {
   bottom: -0.225rem;
 }
 
+.mailing-list-panel {
+  padding: 10rem 0;
+  background-size: cover;
+  width: 100%;
+  background-image: url("../images/flower-vertical-red.jpg");
+  background-position: center center;
+}
+.mailing-list-panel h2 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.mailing-list-form-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0.95);
+}
+.mailing-list-form-wrap.in-view {
+  animation: scale-larger 0.7s ease forwards;
+}
+
+.mailing-list-form-field--1 {
+  width: calc(100% - 120px);
+}
+
+.mailing-list-form-field--2 {
+  width: 120px;
+}
+
+.mailing-list-email-input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  background: white;
+  height: 45px;
+  background: white;
+  display: block;
+  width: 100%;
+}
+
+.mailing-list-submit-btn {
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  border: 1px solid white;
+  background: #bcb865;
+  display: inline-block;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+.mailing-list-submit-btn:hover {
+  opacity: 0.8;
+}
+
 .home-services-grid {
   padding-bottom: 5rem;
+}
+.home-services-grid .col.in-view {
+  animation: scale-larger 1.15s ease forwards;
 }
 
 .hero.hero--home-learn-more {
   padding: 5rem 0 0;
   background-image: url("../images/tree.jpg");
   background-position: center center;
+  margin-bottom: 10rem;
 }
 .hero.hero--home-learn-more .container {
   display: flex;

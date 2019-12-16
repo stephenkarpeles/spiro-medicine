@@ -36,3 +36,7 @@
 .col-3-4 {
   width: calc(75% - #{$gutter});
 }
+
+.col-full-width {
+  width: 100%;
+}
