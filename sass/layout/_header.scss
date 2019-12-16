@@ -46,4 +46,14 @@
 
 .menu-toggle {
   display: none;
+
+  @include mq(ipad, 'max-width') {
+    display: block;
+  }
+}
+
+#primary-menu {  
+  @include mq(ipad, 'max-width') {
+    display: none;
+  }
 }

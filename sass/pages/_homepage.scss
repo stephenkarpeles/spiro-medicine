@@ -1,0 +1,33 @@
+.home-services-grid {
+  padding-bottom: 5rem;
+}
+
+.hero.hero--home-learn-more {
+  padding: 5rem 0 0;
+  background-image: url('../images/tree.jpg');
+  background-position: center center;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .hero__content {
+    position: relative;
+    margin-right: 5%;
+    bottom: -70px;
+    box-shadow: 0 1px 4px 0 rgba(black, .2);
+
+    h3 {
+      text-transform: uppercase;
+
+      span {
+        color: $primary-color;
+      }
+    }
+    
+    p {
+      margin-bottom: .75rem;
+    }
+  }
+}

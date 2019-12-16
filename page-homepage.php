@@ -20,7 +20,7 @@ get_header();
   </div>
 </section>
 
-<section>
+<section class="home-services-grid">
   <div class="container">
 
     <div class="section-heading-wrap">
@@ -86,6 +86,18 @@ get_header();
         </div>
         
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero hero--home-learn-more">
+  <div class="container">
+    <div class="hero__content">
+      <h3>Learn More <span>About Us</span></h3>
+      <p>Our goal is to help our clients, their partners, family, and third parties be their most resilient during the process of building a family or making the decision to proceed in another</p>
+      <a href="" class="btn btn--primary btn--medium">
+        Learn More
+      </a>
     </div>
   </div>
 </section>
