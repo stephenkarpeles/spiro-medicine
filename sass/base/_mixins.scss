@@ -77,3 +77,15 @@ $breakpoints: (
     transform: scale(1);
   }
 }
+
+@keyframes slide-up {
+  0% {
+    position: relative;
+    bottom: -25px;
+  }
+
+  100% {
+    position: relative;
+    bottom: 0;
+  }
+}

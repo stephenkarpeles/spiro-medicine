@@ -43,6 +43,10 @@
   background: white;
   display: block;
   width: 100%;
+  padding: 5px 15px;
+  font-size: 1.15rem;
+  color: $text-color-main;
+  font-family: $sans-serif-main;
 }
 
 .mailing-list-submit-btn {
@@ -56,6 +60,8 @@
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
+  font-family: $sans-serif-main;
+  
   @include link-transition;
 
   &:hover {

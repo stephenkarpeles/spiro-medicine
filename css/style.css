@@ -14,6 +14,16 @@
     transform: scale(1);
   }
 }
+@keyframes slide-up {
+  0% {
+    position: relative;
+    bottom: -25px;
+  }
+  100% {
+    position: relative;
+    bottom: 0;
+  }
+}
 *,
 *:before,
 *:after {
@@ -292,6 +302,15 @@ section {
   }
 }
 
+.footer {
+  padding: 2rem 0;
+  background: #2f7681;
+  color: white;
+}
+.footer a {
+  color: white;
+}
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -505,6 +524,10 @@ section {
   background: white;
   display: block;
   width: 100%;
+  padding: 5px 15px;
+  font-size: 1.15rem;
+  color: #221e1f;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 }
 
 .mailing-list-submit-btn {
@@ -518,17 +541,55 @@ section {
   color: white;
   font-weight: 700;
   font-size: 1.1rem;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   transition: all 0.2s ease;
 }
 .mailing-list-submit-btn:hover {
   opacity: 0.8;
 }
 
+.contact-form-panel {
+  padding: 4rem 0;
+}
+.contact-form-panel__intro {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact-form-panel__intro h2 {
+  text-transform: none;
+}
+.contact-form-panel__intro p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 1.25rem;
+}
+.contact-form-panel__intro:after {
+  content: "";
+  position: absolute;
+  background: #e8e8e8;
+  height: 3px;
+  width: 100px;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.contact-form-wrap input[type=text] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  border: 2px solid #e8e8e8;
+  border-radius: 2px;
+  height: 45px;
+  padding: 5px 15px;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+}
+
 .home-services-grid {
   padding-bottom: 5rem;
-}
-.home-services-grid .col.in-view {
-  animation: scale-larger 1.15s ease forwards;
 }
 
 .hero.hero--home-learn-more {

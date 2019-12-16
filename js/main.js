@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
       }
-      // Uncomment the lines below if you want the animation to run every time it scrolls into view (not just the first time)
+      // Comment out the lines below if you don't want the animation to run every time it scrolls into view (not just the first time)
       // else {
       //   entry.target.classList.remove('in-view');
       // }
