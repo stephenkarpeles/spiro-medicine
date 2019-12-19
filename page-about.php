@@ -12,7 +12,16 @@ get_header();
       <div class="breadcrumbs">
         <?php get_breadcrumb(); ?>
       </div>
-    </div>
-    
+    </div>    
   </div>
 </section>
+
+<section></section>
+<section></section>
+<section></section>
+
+<?php include('inc/mailing-list-panel.php'); ?>
+
+<?php include('inc/contact-form-panel.php'); ?>
+
+<?php get_footer(); ?>

@@ -12,7 +12,10 @@ get_header();
       <div class="breadcrumbs">
         <?php get_breadcrumb(); ?>
       </div>
-    </div>
-    
+    </div>    
   </div>
 </section>
+
+<?php include('inc/contact-form-panel.php'); ?>
+
+<?php get_footer(); ?>

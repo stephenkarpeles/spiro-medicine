@@ -6,4 +6,73 @@
   a {
     color: white;
   }
+
+  &__container {
+    width: 94%;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    max-width: 100%;
+    width: 190px;
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 25px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      font-weight: 700;
+      font-size: .975rem;
+    }
+  }
+
+  &__social-nav {
+    text-align: right;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      margin: 25px 0 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+.footer-col-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col--left,
+.footer-col--right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

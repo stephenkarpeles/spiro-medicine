@@ -35,7 +35,7 @@
 
       <a href="<?php echo get_home_url(); ?>">
         <div class="header__logo">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-color.png ?> " alt="Spiro Medicine Home">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-color.png ?>" alt="Spiro Medicine Home">
         </div>
       </a>
 

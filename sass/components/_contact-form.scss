@@ -1,5 +1,6 @@
 .contact-form-panel {
   padding: 4rem 0;
+  background: $gray-6;
 
   &__intro {
     position: relative;
@@ -32,14 +33,84 @@
 }
 
 .contact-form-wrap {
-  input[type='text'] {
+  width: 100%;
+  max-width: 800px;
+  margin: 4.5rem auto 1rem;
+  opacity: 0;
+
+  &.in-view {
+    animation: fadein 1.5s ease forwards;
+  }
+
+  input[type='text'],
+  textarea {
     appearance: none;
     -webkit-appearance: none;
     background: white;
     border: 2px solid $gray-4;
-    border-radius: 2px;
-    height: 45px;
+    border-radius: 5px !important;
+    height: 50px;
     padding: 5px 15px;
-    font-family: $sans-serif-main
+    font-family: $sans-serif-main;
+    color: $text-color-main;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  textarea {
+    min-height: 140px;
   }
 }
+
+.contact-form-field {
+  input, 
+  textarea {
+    width: 100%;
+  }
+}
+
+.contact-form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  &--2up {
+    .contact-form-field {
+      width: calc(50% - #{$gutter});
+    }
+  }
+
+  &--full-width {
+    .contact-form-field {
+      width: 100%;
+    }
+  }
+  
+  &--justify-center {
+    .contact-form-field {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.contact-form-submit-btn {
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+  border: 1px solid white;
+  background: $secondary-color;
+  display: inline-block;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: $sans-serif-main;
+  
+  @include link-transition;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+

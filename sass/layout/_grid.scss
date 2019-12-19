@@ -12,12 +12,12 @@
 
   @include mq(desktop, 'max-width') {
     width: calc(50% - #{$gutter});  
-    margin-bottom: calc(2* #{$gutter});
+    margin-bottom: calc(2 * #{$gutter});
   }
 
   @include mq(mobile-landscape, 'max-width') {
     width: 100%;
-    margin-bottom: calc(2* #{$gutter});
+    margin-bottom: calc(2 * #{$gutter});
   }
 }
 

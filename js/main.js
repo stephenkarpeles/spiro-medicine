@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('in-view');
       }
       // Comment out the lines below if you don't want the animation to run every time it scrolls into view (not just the first time)
-      // else {
-      //   entry.target.classList.remove('in-view');
-      // }
+      else {
+        entry.target.classList.remove('in-view');
+      }
     });
   }
 
   function initObserver() {
     const observer = new IntersectionObserver(animateElements);
-    const items = document.querySelectorAll('.hero__content, .mailing-list-form-wrap');
+    const items = document.querySelectorAll('.hero__content, .mailing-list-form-wrap, .contact-form-wrap');
     for(let i in items) {
       if(!items.hasOwnProperty(i)) {
         continue;

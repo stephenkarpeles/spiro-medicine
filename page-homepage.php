@@ -102,44 +102,8 @@ get_header();
   </div>
 </section>
 
-<section class="mailing-list-panel">
-  <div class="container">
-    <h2>Sign Up to Our Mailing List</h2>
-    <div class="mailing-list-form-wrap">
-      <div class="mailing-list-form-field mailing-list-form-field--1">
-        <input class="mailing-list-email-input" type="text">
-      </div>
-      <div class="mailing-list-form-field mailing-list-form-field--2">
-        <button class="mailing-list-submit-btn" type="submit">Submit</button>
-      </div>
-    </div>
-  </div>
-</section>
+<?php include('inc/mailing-list-panel.php'); ?>
 
-<section class="contact-form-panel">
-  <div class="container">
-    <div class="contact-form-panel__intro">
-      <h2>Contact Us</h2>
-      <p>Have any questions?</p>
-    </div>
-
-    <div class="contact-form-wrap">
-      <div class="contact-form-row contact-form-row--2up">
-        <div class="contact-form-field">
-          <input type="text" placeholder="Name">
-        </div>
-        <div class="contact-form-field">
-          <input type="text" placeholder="Email">
-        </div>
-      </div>  
-      <div class="contact-form-row contact-form-row--full-width">
-        <div class="contact-form-field">
-          <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
-        </div>
-      </div>
-    </div> 
-
-  </div>
-</section>
+<?php include('inc/contact-form-panel.php'); ?>
 
 <?php get_footer(); ?>
