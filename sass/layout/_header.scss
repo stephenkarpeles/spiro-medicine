@@ -41,6 +41,16 @@
       list-style-type: none;
       margin-left: 2rem;
     }
+
+    &.toggled {
+      ul {
+        display: block !important;
+
+        @include mq(ipad) {
+          display: flex !important;
+        }
+      }
+    }
   }
 }
 
@@ -55,5 +65,9 @@
 #primary-menu {  
   @include mq(ipad, 'max-width') {
     display: none;
+  }
+
+  .main-navigation.toggled & {
+    display: block;
   }
 }
