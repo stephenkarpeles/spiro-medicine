@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initObserver() {
     const observer = new IntersectionObserver(animateElements);
-    const items = document.querySelectorAll('.hero__content, .mailing-list-form-wrap, .contact-form-wrap');
+    const items = document.querySelectorAll('.hero__content, .mailing-list-form-wrap, .contact-form-wrap, .testimonial-block, .link-box');
     for(let i in items) {
       if(!items.hasOwnProperty(i)) {
         continue;

@@ -24,6 +24,26 @@
     bottom: 0;
   }
 }
+@keyframes slide-right {
+  0% {
+    position: relative;
+    left: -25px;
+  }
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+@keyframes slide-left {
+  0% {
+    position: relative;
+    right: -25px;
+  }
+  100% {
+    position: relative;
+    right: 0;
+  }
+}
 *,
 *:before,
 *:after {
@@ -95,6 +115,10 @@ input[type=submit],
   color: #2f7681;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .mar-bot-10 {
   margin-bottom: 10px;
 }
@@ -105,6 +129,10 @@ input[type=submit],
 
 .mar-bot-30 {
   margin-bottom: 30px;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 /* Text meant only for screen readers. */
@@ -224,6 +252,12 @@ small {
   justify-content: space-between;
 }
 
+.col.col-vert-centered {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .col-1-4 {
   width: calc(25% - 20px);
 }
@@ -244,11 +278,29 @@ small {
   width: calc(33.33% - 20px);
 }
 
+.col-2-5 {
+  width: calc(40% - 20px);
+}
+@media screen and (max-width: 767px) {
+  .col-2-5 {
+    width: 100%;
+  }
+}
+
 .col-1-2 {
   width: calc(50% - 20px);
 }
 @media screen and (max-width: 767px) {
   .col-1-2 {
+    width: 100%;
+  }
+}
+
+.col-3-5 {
+  width: calc(60% - 20px);
+}
+@media screen and (max-width: 767px) {
+  .col-3-5 {
     width: 100%;
   }
 }
@@ -276,6 +328,10 @@ section {
 }
 section.section-alt-bg {
   background: #f8f8f8;
+}
+section.section-extra-padding {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .header {
@@ -737,6 +793,133 @@ section.section-alt-bg {
 }
 .contact-form-submit-btn:hover {
   opacity: 0.8;
+}
+
+.testimonial-block {
+  background-image: url("../images/mountains-people.jpg");
+  background-size: cover;
+  color: white;
+  padding: 30px;
+  position: relative;
+}
+.testimonial-block.in-view {
+  animation: slide-right 1s ease forwards;
+}
+.testimonial-block:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.testimonial-block__content {
+  position: relative;
+  z-index: 10;
+}
+.testimonial-block p {
+  color: white;
+}
+.testimonial-block__heading {
+  margin-bottom: 35px;
+  position: relative;
+  text-transform: uppercase;
+}
+.testimonial-block__heading:after {
+  content: "";
+  background: white;
+  height: 5px;
+  width: 160px;
+  position: absolute;
+  bottom: 0px;
+}
+.testimonial-block__quote p {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.testimonial-block__author {
+  text-align: right;
+}
+.testimonial-block__author p {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.link-box {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.link-box.in-view {
+  animation: slide-left 1s ease forwards;
+}
+.link-box__heading {
+  text-transform: uppercase;
+}
+
+.post-block {
+  border: 1px solid #262626;
+}
+.post-block__content {
+  padding: 30px;
+}
+.post-block--no-img {
+  min-height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .post-block--no-img {
+    margin-bottom: calc(2 * 20px);
+    min-height: auto;
+  }
+}
+.post-block--no-img h3 {
+  font-size: 2.15rem;
+  margin-bottom: 0.5rem;
+}
+.post-block--no-img p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.post-block-wide {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: calc(2 * 20px);
+}
+.post-block-wide:last-child {
+  margin-bottom: 0;
+}
+.post-block-wide p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+  padding-bottom: 1.25rem;
+}
+.post-block-wide__image {
+  width: 30%;
+}
+@media screen and (max-width: 859px) {
+  .post-block-wide__image {
+    width: 40%;
+  }
+}
+.post-block-wide__image img {
+  object-fit: cover;
+  height: 100%;
+  width: 300px;
+}
+.post-block-wide__content {
+  width: 70%;
+  padding: 20px 20px 20px 30px;
+}
+@media screen and (max-width: 859px) {
+  .post-block-wide__content {
+    width: 60%;
+  }
 }
 
 .home-services-grid {

@@ -10,4 +10,9 @@ section {
   &.section-alt-bg {
     background: $gray-6;
   }
+
+  &.section-extra-padding {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }

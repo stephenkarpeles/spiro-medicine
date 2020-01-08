@@ -1,0 +1,13 @@
+.link-box {
+  background: white;
+  padding: 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+
+  &.in-view {
+    animation: slide-left 1s ease forwards;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+  }
+}

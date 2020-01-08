@@ -5,6 +5,11 @@
 }
 
 .col { 
+  &.col-vert-centered {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .col-1-4 {
@@ -25,8 +30,24 @@
   width: calc(33.33% - #{$gutter});
 }
 
+.col-2-5 {
+  width: calc(40% - #{$gutter});
+
+  @include mq(ipad, 'max-width') {
+    width: 100%;
+  }
+}
+
 .col-1-2 {
   width: calc(50% - #{$gutter});
+
+  @include mq(ipad, 'max-width') {
+    width: 100%;
+  }
+}
+
+.col-3-5 {
+  width: calc(60% - #{$gutter});
 
   @include mq(ipad, 'max-width') {
     width: 100%;

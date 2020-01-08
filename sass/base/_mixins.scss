@@ -89,3 +89,27 @@ $breakpoints: (
     bottom: 0;
   }
 }
+
+@keyframes slide-right {
+  0% {
+    position: relative;
+    left: -25px;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    position: relative;
+    right: -25px;
+  }
+
+  100% {
+    position: relative;
+    right: 0;
+  }
+}

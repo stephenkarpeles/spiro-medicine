@@ -1,9 +1,15 @@
+// Text
 .text-center {
   text-align: center;
 }
 
 .text-green {
   color: $primary-color;
+}
+
+// Margin
+.no-margin {
+  margin: 0;
 }
 
 .mar-bot-10 {
@@ -16,4 +22,9 @@
 
 .mar-bot-30 {
   margin-bottom: 30px;
+}
+
+// Padding
+.no-padding {
+  padding: 0;
 }
