@@ -91,6 +91,22 @@ input[type=submit],
   text-align: center;
 }
 
+.text-green {
+  color: #2f7681;
+}
+
+.mar-bot-10 {
+  margin-bottom: 10px;
+}
+
+.mar-bot-20 {
+  margin-bottom: 20px;
+}
+
+.mar-bot-30 {
+  margin-bottom: 30px;
+}
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -144,11 +160,12 @@ em {
 }
 
 p {
-  line-height: 1.375;
-  margin-bottom: 1.5rem;
+  line-height: 1.475;
+  margin-bottom: 1rem;
   margin-top: 0;
   padding-bottom: 1rem;
-  font-size: 1em;
+  font-size: 1.15rem;
+  color: #777777;
 }
 
 h1,
@@ -230,6 +247,11 @@ small {
 .col-1-2 {
   width: calc(50% - 20px);
 }
+@media screen and (max-width: 767px) {
+  .col-1-2 {
+    width: 100%;
+  }
+}
 
 .col-2-3 {
   width: calc(66.66% - 20px);
@@ -251,6 +273,9 @@ small {
 
 section {
   padding: 3rem 0;
+}
+section.section-alt-bg {
+  background: #f8f8f8;
 }
 
 .header {
@@ -546,6 +571,9 @@ section {
   left: 0;
   right: 0;
   bottom: -0.225rem;
+}
+.featured-box__blurb {
+  font-size: 1rem;
 }
 
 .mailing-list-panel {

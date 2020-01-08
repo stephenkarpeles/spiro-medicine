@@ -27,6 +27,10 @@
 
 .col-1-2 {
   width: calc(50% - #{$gutter});
+
+  @include mq(ipad, 'max-width') {
+    width: 100%;
+  }
 }
 
 .col-2-3 {

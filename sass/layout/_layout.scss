@@ -6,4 +6,8 @@
 
 section {
   padding: $section-padding;
+
+  &.section-alt-bg {
+    background: $gray-6;
+  }
 }
