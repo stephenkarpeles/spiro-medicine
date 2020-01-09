@@ -10,9 +10,9 @@ em {
 
 p {
   line-height: 1.475;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   margin-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 1.25rem;
   font-size: 1.15rem;
   color: $text-color-mid;
 }
@@ -66,5 +66,29 @@ small {
 
   h2 {
     font-size: 2.75rem;
+  }
+}
+
+.heading-alt {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  &:after {
+    position: absolute;
+    content: '';
+    background: $gray-3;
+    height: 3px;
+    width: 60px;
+    bottom: 0px;
+    display: block;
+  }
+
+  &--a {
+    color: $primary-color;
+  }
+
+  &--b {
+    color: $quaternary-color;
   }
 }

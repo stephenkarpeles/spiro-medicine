@@ -1,7 +1,41 @@
 .grid-row {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  &--underlined {
+    padding-bottom: 2.75rem;
+    margin-bottom: 3.25rem;
+
+    &:last-of-type {
+      margin-bottom: 1rem;
+      padding-bottom: 0;
+
+      &:after {
+        border-bottom: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      max-width: 600px;
+      min-width: 200px;
+      margin: 0 auto;
+      border-bottom: 1px solid $gray-3;
+    }
+  }
+
+  > .col-1-2:first-of-type {
+    @include mq(ipad, 'max-width') {
+      margin-bottom: 2.5rem;
+    }
+  }
 }
 
 .col { 
