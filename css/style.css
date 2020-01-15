@@ -119,6 +119,18 @@ input[type=submit],
   margin: 0;
 }
 
+.mar-top-10 {
+  margin-top: 10px;
+}
+
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+.mar-top-30 {
+  margin-top: 30px;
+}
+
 .mar-bot-10 {
   margin-bottom: 10px;
 }
@@ -460,6 +472,11 @@ section.section-extra-padding {
 .footer__logo {
   max-width: 100%;
   width: 190px;
+}
+.footer__copyright {
+  margin-top: 14px;
+  font-size: 11px;
+  text-align: center;
 }
 .footer__nav ul {
   display: flex;
@@ -897,6 +914,57 @@ section.section-extra-padding {
   text-align: right;
   margin: 0;
   padding: 0;
+}
+
+.testimonial-panel {
+  text-align: center;
+  background-image: url("../images/clouds.jpg");
+  background-position: center center;
+  color: white;
+  position: relative;
+  padding: 5rem 0;
+}
+.testimonial-panel:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.testimonial-panel__content {
+  position: relative;
+  z-index: 10;
+}
+.testimonial-panel p,
+.testimonial-panel h1,
+.testimonial-panel h2,
+.testimonial-panel h3,
+.testimonial-panel h4,
+.testimonial-panel h5,
+.testimonial-panel h6 {
+  color: white;
+}
+.testimonial-panel__heading {
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+}
+.testimonial-panel__quote {
+  font-size: 2.9rem;
+  line-height: 1.3;
+  padding-bottom: 3rem;
+  max-width: 840px;
+  margin: 0 auto;
+  width: 100%;
+}
+.testimonial-panel__quote.in-view {
+  animation: scale-larger 2.5s ease forwards;
+}
+.testimonial-panel__author {
+  font-size: 1.35rem;
 }
 
 .link-box {

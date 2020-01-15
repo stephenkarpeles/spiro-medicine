@@ -1,4 +1,4 @@
-<section class="contact-form-panel">
+<section class="contact-form-panel" id="contact-form-panel">
   <div class="container">
     <div class="contact-form-panel__intro">
       <h2>Contact Us</h2>

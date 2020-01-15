@@ -21,6 +21,9 @@
           <div class="footer__logo">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-white.svg ?>" alt="Spiro Medicine Logo">
           </div>
+          <div class="footer__copyright">
+            <span>&copy; Copyright <?php echo date("Y"); ?></span>
+          </div>
         </div>
         <div class="footer-col footer-col--right">
           <nav class="footer__nav">

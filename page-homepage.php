@@ -3,22 +3,50 @@
 get_header(); 
 ?>
 
-<section class="hero hero--home">
-  <div class="container">
-    <div class="hero__content">
-      <h1>
-        <span>Welcome to</span> Spiro
-      </h1>
-      <p>
-        We offer compassionate, hyperaccessible, evidence-based psychotherapy, specializing in reproductive health.
-      </p>
-      <a href="" class="btn btn--primary btn--medium">
-        Contact Us to Learn More
-      </a>
-    </div>
-    
-  </div>
-</section>
+<?php      
+  $interstitial = get_field('interstitial');  
+  if( $interstitial ): ?>
+
+    <section class="featured-block has-overlay-dark" style="background-image: url('<?php echo $interstitial['background_image']['url']; ?>');">
+      <div class="container">
+        <div class="featured-block__content">
+          <div class="featured-block__image">
+            <img src="<?php echo $interstitial['icon_image']['url']; ?>" alt="<?php echo $interstitial['icon_image']['alt']; ?>">
+          </div>
+          <div class="featured-block__heading">
+            <h4><?php echo $interstitial['heading']; ?></h4>
+          </div>
+          <div class="featured-block__text">
+            <?php echo $interstitial['copy']; ?>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<?php endif; ?>
+
+<?php      
+  $hero = get_field('hero');  
+  if( $hero ): ?>
+
+    <section class="hero hero--home">
+      <div class="container">
+        <div class="hero__content">
+          <h1>
+            <span><?php echo $hero['heading_small_text']; ?></span> <?php echo $hero['heading_large_text']; ?>
+          </h1>
+          <p>
+            <?php echo $hero['blurb']; ?>
+          </p>
+          <a href="#contact-form-panel" class="scroll btn btn--primary btn--medium">
+            <?php echo $hero['button_text']; ?>
+          </a>
+        </div>
+        
+      </div>
+    </section>
+
+<?php endif; ?>
 
 <section class="home-services-grid">
   <div class="container">
@@ -102,7 +130,7 @@ get_header();
   </div>
 </section>
 
-<section class="section-alt-bg">
+<section class="section-alt-bg section-extra-padding">
   <div class="container">
     <div class="grid-row">
       <div class="col col-1-2">
@@ -145,7 +173,7 @@ get_header();
   </div>  
 </section>
 
-<section class="section-extra-padding">
+<!-- <section class="section-extra-padding">
   <div class="container">
     <div class="grid-row mar-bot-30">
       <div class="col col-full-width text-center">
@@ -214,7 +242,7 @@ get_header();
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <?php include('inc/mailing-list-panel.php'); ?>
 
