@@ -48,75 +48,81 @@ get_header();
 
 <?php endif; ?>
 
-<section class="home-services-grid">
-  <div class="container">
+<?php      
+  $services = get_field('services');  
+  if( $services ): ?>
 
-    <div class="section-heading-wrap">
-      <h2><span>Our</span> Services</h2>
-    </div>
+    <section class="home-services-grid">
+      <div class="container">
 
-    <div class="grid-row">
-
-      <div class="col col-1-4">
-
-        <div class="featured-box">
-          <div class="featured-box__icon">
-            <i class="fas fa-briefcase-medical"></i>
-          </div>
-          <h4 class="featured-box__heading">Heading</h3>
-          <p class="featured-box__blurb">Management and care of a patient to combat disease and disorder.</p>
-          <a href="" class="featured-box__cta btn btn--primary btn--small">
-            Learn More
-          </a>
+        <div class="section-heading-wrap">
+          <h2><span><?php echo $services['heading_text_colored']; ?></span> <?php echo $services['heading_text_black']; ?></h2>
         </div>
 
-      </div>
+        <div class="grid-row">
 
-      <div class="col col-1-4">
+          <div class="col col-1-4">
 
-        <div class="featured-box">
-          <div class="featured-box__icon">
-            <i class="fas fa-briefcase-medical"></i>
+            <div class="featured-box">
+              <div class="featured-box__icon">
+                <i class="<?php echo $services['column_1_icon']; ?>"></i>
+              </div>
+              <h4 class="featured-box__heading"><?php echo $services['column_1_heading']; ?></h4>
+              <p class="featured-box__blurb"><?php echo $services['column_1_blurb']; ?></p>
+              <a href="" class="featured-box__cta btn btn--primary btn--small">
+                <?php echo $services['column_1_button_text']; ?>
+              </a>
+            </div>
+
           </div>
-          <h4 class="featured-box__heading">Heading</h3>
-          <p class="featured-box__blurb">Management and care of a patient to combat disease and disorder.</p>
-          <a href="" class="featured-box__cta btn btn--primary btn--small">
-            Learn More
-          </a>
-        </div>
-        
-      </div>
-      <div class="col col-1-4">
 
-        <div class="featured-box">
-          <div class="featured-box__icon">
-            <i class="fas fa-briefcase-medical"></i>
-          </div>
-          <h4 class="featured-box__heading">Heading</h3>
-          <p class="featured-box__blurb">Management and care of a patient to combat disease and disorder.</p>
-          <a href="" class="featured-box__cta btn btn--primary btn--small">
-            Learn More
-          </a>
-        </div>
-        
-      </div>
-      <div class="col col-1-4">
+          <div class="col col-1-4">
 
-        <div class="featured-box">
-          <div class="featured-box__icon">
-            <i class="fas fa-briefcase-medical"></i>
+            <div class="featured-box">
+              <div class="featured-box__icon">
+                <i class="<?php echo $services['column_2_icon']; ?>"></i>
+              </div>
+              <h4 class="featured-box__heading"><?php echo $services['column_2_heading']; ?></h4>
+              <p class="featured-box__blurb"><?php echo $services['column_2_blurb']; ?></p>
+              <a href="" class="featured-box__cta btn btn--primary btn--small">
+                <?php echo $services['column_2_button_text']; ?>
+              </a>
+            </div>
+            
           </div>
-          <h4 class="featured-box__heading">Heading</h3>
-          <p class="featured-box__blurb">Management and care of a patient to combat disease and disorder.</p>
-          <a href="" class="featured-box__cta btn btn--primary btn--small">
-            Learn More
-          </a>
+          <div class="col col-1-4">
+
+            <div class="featured-box">
+              <div class="featured-box__icon">
+                <i class="<?php echo $services['column_3_icon']; ?>"></i>
+              </div>
+              <h4 class="featured-box__heading"><?php echo $services['column_3_heading']; ?></h4>
+              <p class="featured-box__blurb"><?php echo $services['column_3_blurb']; ?></p>
+              <a href="" class="featured-box__cta btn btn--primary btn--small">
+                <?php echo $services['column_3_button_text']; ?>
+              </a>
+            </div>
+            
+          </div>
+          <div class="col col-1-4">
+
+            <div class="featured-box">
+              <div class="featured-box__icon">
+                <i class="<?php echo $services['column_4_icon']; ?>"></i>
+              </div>
+              <h4 class="featured-box__heading"><?php echo $services['column_4_heading']; ?></h4>
+              <p class="featured-box__blurb"><?php echo $services['column_4_blurb']; ?></p>
+              <a href="" class="featured-box__cta btn btn--primary btn--small">
+                <?php echo $services['column_4_button_text']; ?>
+              </a>
+            </div>
+            
+          </div>
         </div>
-        
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+<?php endif; ?>
 
 <section class="hero hero--home-learn-more">
   <div class="container">
