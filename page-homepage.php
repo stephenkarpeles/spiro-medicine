@@ -25,6 +25,7 @@ get_header();
 
 <?php endif; ?>
 
+
 <?php      
   $hero = get_field('hero');  
   if( $hero ): ?>
@@ -47,6 +48,7 @@ get_header();
     </section>
 
 <?php endif; ?>
+
 
 <?php      
   $services = get_field('services');  
@@ -124,60 +126,85 @@ get_header();
 
 <?php endif; ?>
 
-<section class="hero hero--home-learn-more">
-  <div class="container">
-    <div class="hero__content">
-      <h3>Learn More <span>About Us</span></h3>
-      <p>Our goal is to help our clients, their partners, family, and third parties be their most resilient during the process of building a family or making the decision to proceed in another</p>
-      <a href="" class="btn btn--primary btn--medium">
-        Learn More
-      </a>
-    </div>
-  </div>
-</section>
+
+<?php      
+  $learn = get_field('learn_more');  
+  if( $learn ): ?>
+
+    <section class="hero hero--home-learn-more" style="background-image: url('<?php echo $learn['background_image']['url']; ?>');">
+      <div class="container">
+        <div class="hero__content">
+          <h3><?php echo $learn['heading_text_colored']; ?> <span><?php echo $learn['heading_text_black']; ?></span></h3>
+          <p><?php echo $learn['blurb']; ?></p>
+          <a href="<?php echo $learn['button_link']; ?>" class="btn btn--primary btn--medium">
+            <?php echo $learn['button_text']; ?>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<?php endif; ?>
+
 
 <section class="section-alt-bg section-extra-padding">
   <div class="container">
     <div class="grid-row">
       <div class="col col-1-2">
 
-        <div class="testimonial-block">
-          <div class="testimonial-block__content">
-            <div class="testimonial-block__heading">
-              <h3>
-                Testimonials
-              </h3>
+        <?php      
+          $testimonial = get_field('testimonial');  
+          if( $testimonial ): ?>
+
+            <div class="testimonial-block" style="background-image: url('<?php echo $testimonial['background_image']['url']; ?>');">
+              <div class="testimonial-block__content">
+                <div class="testimonial-block__heading">
+                  <h3>
+                    <?php echo $testimonial['heading']; ?>
+                  </h3>
+                </div>
+                <div class="testimonial-block__quote">
+                  <p><?php echo $testimonial['quote']; ?></p>
+                </div>
+                <div class="testimonial-block__author">
+                  <p>
+                    <?php echo $testimonial['author']; ?>
+                  </p>
+                </div>  
+              </div>      
             </div>
-            <div class="testimonial-block__quote">
-              <p>"Even after our first session, I already felt as though the Spiro team truly cared for me as if I was a friend of theirs."</p>
-            </div>
-            <div class="testimonial-block__author">
-              <p>
-                - Anonymous Client
-              </p>
-            </div>  
-          </div>      
-        </div>
+
+        <?php endif; ?>
+
       </div>
 
       <div class="col col-1-2 col-vert-centered">
-        <div class="link-box">
-          <div class="link-box__heading">
-            <h3>Learn About <span class="text-green">The Team</span></h3>
-          </div>
-          <div class="link-box__text">
-            <p>This is a statement that describes the team. They have this many years of experience and they also do this.</p>
-          </div>
-          <div class="link-box__cta">
-            <a href="" class="btn btn--secondary btn--medium">
-              Meet The Team
-            </a>
-          </div>
-        </div>
+
+        <?php      
+          $team = get_field('team');  
+          if( $team ): ?>
+
+            <div class="link-box">
+              <div class="link-box__heading">
+                <h3><?php echo $team['heading_text_black']; ?> <span class="text-green"><?php echo $team['heading_text_colored']; ?></span></h3>
+              </div>
+              <div class="link-box__text">
+                <p><?php echo $team['blurb']; ?></p>
+              </div>
+              <div class="link-box__cta">
+                <a href="<?php echo $team['button_link']; ?>" class="btn btn--secondary btn--medium">
+                  <?php echo $team['button_text']; ?>
+                </a>
+              </div>
+            </div>
+
+        <?php endif; ?>
+
       </div>
     </div>
   </div>  
 </section>
+
+
 
 <!-- <section class="section-extra-padding">
   <div class="container">
