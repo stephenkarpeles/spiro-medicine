@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // Animations
-  
+  // Animations  
   // Add animations using IntersectionObserver when elements are scrolled to  
   function animateElements(entries) {
     entries.forEach(function (entry) {
@@ -64,6 +63,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.IntersectionObserver) {
     initObserver();
   }
+
+
+  // FAQ Toggle
+  const faqQuestion = [...document.querySelectorAll('.faq__list-item dt')];
+  const faqBtn = [...document.querySelectorAll('.faq__list-item button')];
+  const faqAnswer = [...document.querySelectorAll('.faq__list-item dd')];
+
+  const toggleFaq = function toggle() {
+    this.classList.toggle('js_is-opened');
+    const expanded = this.classList.contains('js_is-opened');
+    const question = this.querySelector('button');
+    const answer = this.nextElementSibling;
+    answer.setAttribute('tabindex', expanded ? '0' : '-1');
+    question.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    answer.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+
+    if (expanded) {
+      answer.focus();
+    }
+  };
+
+  faqQuestion.forEach((value, index) => {
+    faqQuestion[index].addEventListener('click', toggleFaq);
+  });
 
 
 }, false);  

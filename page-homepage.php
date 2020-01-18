@@ -3,28 +3,6 @@
 get_header(); 
 ?>
 
-<?php      
-  $interstitial = get_field('interstitial');  
-  if( $interstitial ): ?>
-
-    <section class="featured-block has-overlay-dark" style="background-image: url('<?php echo $interstitial['background_image']['url']; ?>');">
-      <div class="container">
-        <div class="featured-block__content">
-          <div class="featured-block__image">
-            <img src="<?php echo $interstitial['icon_image']['url']; ?>" alt="<?php echo $interstitial['icon_image']['alt']; ?>">
-          </div>
-          <div class="featured-block__heading">
-            <h4><?php echo $interstitial['heading']; ?></h4>
-          </div>
-          <div class="featured-block__text">
-            <?php echo $interstitial['copy']; ?>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<?php endif; ?>
-
 
 <?php      
   $hero = get_field('hero');  
@@ -203,7 +181,6 @@ get_header();
     </div>
   </div>  
 </section>
-
 
 
 <!-- <section class="section-extra-padding">
