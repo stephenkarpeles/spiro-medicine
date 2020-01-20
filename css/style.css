@@ -1045,6 +1045,9 @@ section.section-extra-padding {
   max-width: 800px;
   margin: 0 auto;
 }
+.faqs.in-view {
+  animation: slide-right 1s ease forwards;
+}
 .faqs dl,
 .faqs dd {
   margin: 0;

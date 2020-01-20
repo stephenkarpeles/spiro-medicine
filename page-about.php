@@ -98,7 +98,6 @@ get_header();
 
         <div class="faqs" id="faq">
 
-
           <?php if( have_rows('faqs') ): ?>
             <?php $i = 1; while( have_rows('faqs') ): the_row();               
 
