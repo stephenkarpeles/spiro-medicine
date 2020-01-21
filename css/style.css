@@ -1254,4 +1254,27 @@ button.menu-toggle span:nth-child(2) {
   }
 }
 
+.page-legal h1 {
+  text-transform: none;
+  font-size: 40px;
+}
+.page-legal ol,
+.page-legal ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+.page-legal ol > li {
+  margin-bottom: 20px;
+}
+.page-legal p {
+  font-size: 1rem;
+  color: #221e1f;
+}
+.page-legal hr {
+  border: 0;
+  height: 1px;
+  background: black;
+  margin: 1rem 0 2rem;
+}
+
 /*# sourceMappingURL=style.css.map */

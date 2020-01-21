@@ -1,0 +1,28 @@
+.page-legal {
+  h1 {
+    text-transform: none;
+    font-size: 40px;
+  }
+
+  ol, 
+  ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+  }
+
+  ol > li {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $text-color-main;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: black;
+    margin: 1rem 0 2rem;
+  }
+}

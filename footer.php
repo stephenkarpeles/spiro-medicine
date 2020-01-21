@@ -22,7 +22,7 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-white.svg ?>" alt="Spiro Medicine Logo">
           </div>
           <div class="footer__copyright">
-            <span>&copy; Copyright <?php echo date("Y"); ?></span>
+            <span>&copy; Copyright <?php echo date("Y"); ?></span>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?php the_field('legal_link', 'option'); ?>">Legal</a>
           </div>
         </div>
         <div class="footer-col footer-col--right">
