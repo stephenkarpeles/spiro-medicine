@@ -7,7 +7,7 @@ get_header();
   $hero = get_field('hero');  
   if( $hero ): ?>
 
-    <section class="hero hero--resources">
+    <section class="hero hero--resources" style="background-image: url('<?php echo $hero['background_image']['url']; ?>');">
       <div class="container">
         <div class="hero__content">
           <h1>

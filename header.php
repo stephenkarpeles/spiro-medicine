@@ -40,7 +40,11 @@
       </a>
 
       <nav id="site-navigation" class="header__nav main-navigation">
-        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'spiro-medicine' ); ?></button>
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <?php
         wp_nav_menu( array(
           'theme_location' => 'menu-1',

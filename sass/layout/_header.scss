@@ -29,10 +29,16 @@
   &__logo {
     img {
       width: 180px;
+
+      @include mq(desktop-narrow, 'max-width') {
+        width: 160px;
+      }
     }
   }
 
   &__nav {
+    position: relative;
+
     ul {
       display: flex;
     }
@@ -40,11 +46,30 @@
     li {
       list-style-type: none;
       margin-left: 2rem;
+
+      @include mq(desktop-narrow, 'max-width') {
+        margin-left: 1.6rem;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @include mq(ipad, 'max-width') {
+        margin-left: 0;
+      }
     }
 
     &.toggled {
       ul {
         display: block !important;
+        margin-top: 60px;
+        text-align: right;
+        animation: fadein 1.1s ease forwards;
+
+        li {
+          margin-bottom: 10px;
+        }
 
         @include mq(ipad) {
           display: flex !important;
@@ -54,11 +79,38 @@
   }
 }
 
-.menu-toggle {
+button.menu-toggle {
   display: none;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 12px;
+  outline: none;
 
   @include mq(ipad, 'max-width') {
     display: block;
+  }
+
+  span {
+    display: block;
+    background: $primary-color;
+    width: 32px;
+    height: 4px;
+  }
+
+  span:nth-child(1) {
+    margin-bottom: 4px;
+  }
+
+  span:nth-child(2) {
+    margin-bottom: 4px;
+  }
+
+  span:nth-child(3) {
   }
 }
 

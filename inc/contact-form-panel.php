@@ -1,8 +1,8 @@
 <section class="contact-form-panel" id="contact-form-panel">
   <div class="container">
     <div class="contact-form-panel__intro">
-      <h2>Contact Us</h2>
-      <p>Have any questions?</p>
+      <h2><?php the_field('contact_heading', 'option'); ?></h2>
+      <p><?php the_field('contact_subheading', 'option'); ?></p>
     </div>
 
     <div class="contact-form-wrap">

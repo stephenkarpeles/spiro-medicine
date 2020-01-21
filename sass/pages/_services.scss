@@ -1,0 +1,37 @@
+.support-block-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary-color;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    font-size: 25px;
+    text-transform: none;
+
+    &:after {
+      position: absolute;
+      content: '';
+      background: $gray-3;
+      height: 3px;
+      width: 60px;
+      bottom: 0px;
+      display: block;
+    }
+  }
+
+  @include mq(ipad, 'max-width') {
+    .col-1-2:nth-child(2) {
+      h1, h2, h3, h4, h5, h6 {
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+}
