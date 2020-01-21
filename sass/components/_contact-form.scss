@@ -43,6 +43,7 @@
   }
 
   input[type='text'],
+  input[type='email'],
   textarea {
     appearance: none;
     -webkit-appearance: none;
@@ -78,6 +79,16 @@
     .contact-form-field {
       width: calc(50% - #{$gutter});
     }
+
+    @include mq(full-nav, 'max-width') {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .contact-form-field {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   &--full-width {
@@ -94,9 +105,11 @@
   }
 }
 
-.contact-form-submit-btn {
+.contact-form-submit-btn,
+.wpcf7-submit {
   cursor: pointer;
-  width: 130px;
+  width: 130px !important;
+  margin: 0 auto;
   text-align: center;
   border: 1px solid white;
   background: $secondary-color;

@@ -2,6 +2,24 @@
   h1 {
     text-transform: none;
     font-size: 40px;
+
+    + ul {
+      margin-top: 5px;
+    }
+  }
+
+  h4 {
+    padding-top: 100px;
+    outline: none;
+  }
+
+  a {
+    color: $primary-color;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   ol, 

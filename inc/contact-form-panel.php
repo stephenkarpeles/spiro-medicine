@@ -5,7 +5,9 @@
       <p><?php the_field('contact_subheading', 'option'); ?></p>
     </div>
 
-    <div class="contact-form-wrap">
+    <?php echo do_shortcode( '[contact-form-7 id="'.get_field('contact_form_id', 'option').'"]' ); ?>
+
+    <!-- <div class="contact-form-wrap">
       <div class="contact-form-row contact-form-row--2up">
         <div class="contact-form-field">
           <input type="text" placeholder="Name">
@@ -23,7 +25,7 @@
         <div class="contact-form-field">
           <button class="contact-form-submit-btn" type="submit">Submit</button>
         </div>
-      </div>
+      </div> -->
 
     </div> 
 

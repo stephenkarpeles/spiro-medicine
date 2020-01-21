@@ -16,4 +16,6 @@ get_header();
   </div>
 </section>
 
+<?php include('inc/contact-form-panel.php'); ?>
+
 <?php get_footer(); ?>
